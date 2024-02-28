@@ -68,3 +68,4 @@ print(min(lst), max(lst))
 # 문 1152 단어 개수
 N = input().split()
 print(N, len(N))
+
