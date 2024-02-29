@@ -58,9 +58,9 @@ n = int(input())
 for i in range(1, n+1):
     print(" "*(n-i)+"*"*i)
 
-# X보다 작은 수
+# 문 10871 X보다 작은 수
     
-# 최소 최대
+# 문10818 최소 최대
 N = int(input())
 lst = list(map(int, input().split()))
 print(min(lst), max(lst))

@@ -14,14 +14,31 @@ while True:
     formatted_name = get_formatted_name(f_name, l_name)
     print(f"\nHello, {formatted_name}!")
 
-unprinted_design = ["phone case", "robot pendant", "dodecahedron"]
-completed_models = []
+def print_models(unprinted_designs, completed_models):
+    """빈 리스트일 때까지 출력"""
 
-while unprinted_design:
-    current_design = unprinted_design.pop()
-    print(f"Printing model: {current_design}")
-    completed_models.append(current_design)
+    while unprinted_designs:
+        current_design = unprinted_designs.pop() #마지막부터 1개씩 꺼내면 없어져
+        print(f"Printing model: {current_design}")
+        completed_models.append(current_design)
 
+# 리스트가 parameter면 mutable
+def show_completed_models(completed_models):
     print("\nThe following models have been printed")
     for completed_model in completed_models:
         print(completed_model)
+
+unprinted_designs = ["phone case", "robot pendant", "dodecahedron"]
+completed_models = []
+
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
+
+def modify_string(s): #String 값을 전달 받았다
+    #immutable 변수는 tuple, String, boolean, 숫자
+    s = s + "world" #변수 s는 원래의 s가 가리키는 주소와 달라짐
+    print(s)
+
+st = "hello"
+modify_string(st)
+print(st) #hello 출력 > 변경 X
