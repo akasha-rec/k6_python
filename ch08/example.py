@@ -23,5 +23,5 @@ def finish_message(sent_messages): #보낸 메시지
 
 show_messages(unsend_messages, sent_messages)
 finish_message(sent_messages)
-print(sent_messages)
+
 
