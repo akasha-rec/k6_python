@@ -28,7 +28,7 @@ result = apply_operation(add, 3, 4)
 result2 = apply_operation(minus, 4, 3)
 print(f"add 결과 : {result}, minus 결과 : {result2}")
 
-#map(), filter() 함수 : 리스트 or tuple
+#map(), filter() 함수
 #> map(함수, 데이터) : 머신러닝, 딥러닝 때 사용
 #>> filter(함수, 데이터)
 
