@@ -40,25 +40,34 @@ class Battery:
     def describe_battery(self):
         """배터리의 크기를 설명하는 문장을 출력합니다"""
         print(f"이 차의 배터리는 {self.battery_size}-kWh입니다.")
+
+    def get_range(self):
+        """이 배터리로 주행가능한 거리를 알려줍니다"""
+        if self.battery_size <= 40:
+            range = 150
+        elif self.battery_size > 65:
+            range = 225
+
+        print(f"이 자동차가 갈 수 있는 거리는 {range} 입니다.")
         
 class ElectricCar(Car):
     """전기차만 해당하는 특성을 정의합니다"""
-
-    def __init__(self, make, model, year, battery):
+    #Battery() : 생성자? default parameter?
+    def __init__(self, make, model, year, large_battery = Battery()):
         """부모 클래스의 속성을 초기화합니다"""
         super().__init__(make, model, year)
-        self.battery = Battery()
+        self.battery = large_battery
+        # self.battery = Battery() #Battery 인스턴스를 생성
 
     # def describe_battery(self):
     #     """배터리 크기를 설명하는 문장을 출력합니다"""
     #     print(f"이 차의 배터리는 {self.battery_size}-kWh 입니다.")
-
-    # def get_descriptive_name(self):
-    #     print(super().get_descriptive_name())
-    #     print(f"차량 배터리의 크기는 {self.battery_size}입니다.")
         
-my_leaf = ElectricCar("nissan", "leaf", 2024, 100)
+my_leaf = ElectricCar("nissan", "leaf", 2024)
 print(my_leaf.get_descriptive_name())
-my_leaf.battery.describe_battery()
-# my_leaf.describe_battery()
-# my_leaf.get_descriptive_name()
+my_leaf.battery.describe_battery() #my_leaf 인스턴스의 battery 속성을 찾아서 할당된 Battery의 describe_battery() 호출
+large_battery = Battery(80)
+my_large_car = ElectricCar("nissan", "leaf", 2024, large_battery)
+my_large_car.battery.describe_battery()
+my_leaf.battery.get_range()
+my_large_car.battery.get_range()
