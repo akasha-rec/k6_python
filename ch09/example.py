@@ -12,7 +12,7 @@ class Restaurant:
 
 class IceCreamStand(Restaurant):
     def __init__(self, restaurant_name, cuisine_type, flavors):
-        super().__init__(restaurant_name, cuisine_type)
+        super().__init__(restaurant_name, cuisine_type) #함수호출
         self.flavors = flavors
 
     def show_flavors(self):
