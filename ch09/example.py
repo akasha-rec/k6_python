@@ -10,6 +10,18 @@ class Restaurant:
     def open_restaurant(self):
         print("레스토랑이 문을 열었습니다.")
 
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type, flavors):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = flavors
+
+    def show_flavors(self):
+        print("아이스크림은 {}맛입니다.".format(self.flavors))
+        # print(f"아이스크림은 {self.flavors}맛입니다.")
+
+ice_cream = IceCreamStand("Italy", "restaurant", "banilla")
+ice_cream.show_flavors()
+
 restaurant1 = Restaurant("맘스터치", "일반음식점")
 restaurant2 = Restaurant("김밥천국", "분식")
 restaurant3 = Restaurant("레스토랑", "레스토랑")
@@ -37,3 +49,8 @@ user1.describe_user()
 user1.greet_user()
 user2.describe_user()
 user2.greet_user()
+
+from random import choice
+players  = ["a", "b", "c", "d", "e"]
+frt = choice(players)
+print(frt)
