@@ -27,7 +27,15 @@ print(f"{party[1]}을 파티에 초대합니다.")
 print(f"{party[2]}을 파티에 초대합니다.")
 
 # 연습문제 3-5 p85
-print(f"{party[1]}은 참가하지 못했습니다")
+print(f"{party[1]}을 파티에 오지 못한다고 합니다.")
+party.insert(1, "D")
+
+print(f"{party[0]}을 파티에 초대합니다.")
+print(f"{party[1]}을 파티에 초대합니다.")
+print(f"{party[2]}을 파티에 초대합니다.")
+
+
+
 
 
 
