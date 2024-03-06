@@ -90,8 +90,3 @@ for i in compare_card:
         print(1)
     else:
         print(0)
-
-n = 0
-while n <2:
-    print(n)
-    n +=1
