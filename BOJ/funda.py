@@ -77,10 +77,10 @@ print(len(str))
 
 string = input() # 56초
 print(len(string.split()))
-
+ 
 #집합과 맵 > 문 10815
 #데이터 50만 개, 두 수가 겹칠 일이 없다 > key로 접근 = dictionary 써라
-N, M = int(input())
+N, M = map(int, input().split())
 card = list(map(int, input().split()))
 compare_card = list(map(int, input().split()))
 have_card = {num: 1 for num in card}
@@ -90,3 +90,8 @@ for i in compare_card:
         print(1)
     else:
         print(0)
+
+n = 0
+while n <2:
+    print(n)
+    n +=1

@@ -78,4 +78,3 @@ print(add(1, 2))
 data = {"a" : 1, "b" : 2, "c" : 3}
 print({v : k for k, v in data.items()}) # key-value > value-key
 print({x**2 for x in range(5) if x % 2 ==0})
-
