@@ -59,13 +59,34 @@ for i in range(1, n+1):
     print(" "*(n-i)+"*"*i)
 
 # 문 10871 X보다 작은 수
-    
+# 정수 N개, 수열 A와 정수 X가 주어진다. 이 때 A에서 X보다 작은 수를 모두 출력
+N, X = map(int, input().split()) #map 객체는 변수를 여러개 저장 가능
+A = list(map(int, input().split()))
+for i in range(N):
+    if A[i] < X:
+        print(A[i], end=" ")
+
 # 문10818 최소 최대
-N = int(input())
-lst = list(map(int, input().split()))
+N = int(input()) # 입력 받겠다.
+lst = list(map(int, input().split())) #문자열로 입력받은 것을 map 함수를 사용해 int형으로 바꿔줘
 print(min(lst), max(lst))
 
 # 문 1152 단어 개수
-N = input().split()
-print(N, len(N))
+str= input().split() #60초
+print(len(str))
 
+string = input() # 56초
+print(len(string.split()))
+
+#집합과 맵 > 문 10815
+#데이터 50만 개, 두 수가 겹칠 일이 없다 > key로 접근 = dictionary 써라
+N, M = int(input())
+card = list(map(int, input().split()))
+compare_card = list(map(int, input().split()))
+have_card = {num: 1 for num in card}
+
+for i in compare_card:
+    if have_card.get(i, False):
+        print(1)
+    else:
+        print(0)
