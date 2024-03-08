@@ -80,13 +80,21 @@ print(len(string.split()))
  
 #집합과 맵 > 문 10815
 #데이터 50만 개, 두 수가 겹칠 일이 없다 > key로 접근 = dictionary 써라
-N, M = map(int, input().split())
-card = list(map(int, input().split()))
-compare_card = list(map(int, input().split()))
-have_card = {num: 1 for num in card}
+import sys
+input = sys.stdin.readline
 
-for i in compare_card:
-    if have_card.get(i, False):
-        print(1)
-    else:
-        print(0)
+dic = {}
+#튜플 arr, arr2를 이용해서 dic으로 업데이트 > arr의 각 요소가 dic의 키로 존재하는가?
+N = int(input().rstrip()) #공백으로 구분된 수에서 공백 제거 > 불필요한 공백으로 인한 오류방지
+arr = tuple(map(int,input().rstrip().split())) #공백을 기준으로 분리하여 정수로 변환 후 튜플에 저장
+M = int(input().rstrip())
+arr2= tuple(map(int,input().rstrip().split()))
+
+for i in range(len(arr2)): #arr2의 각 요소를 키로 가지는 dic 생성
+    dic[arr2[i]] = 0
+
+for idx in range(len(arr)): 
+    if arr[idx] in dic.keys(): #arr의 요소가 dic의 키로 존재하는지 확인
+        dic[arr[idx]]+=1 #존재한다면 1씩 증가
+
+print(*dic.values()) #dic의 값을 풀어서 인자로 전달
