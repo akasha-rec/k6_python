@@ -54,9 +54,19 @@ for d in os.listdir():
     print(d, os.path.isdir(d))
 
 #파일 생성하기
-path = Path("./aaa/aa.txt")
+# path = Path("./aaa/aa.txt")
 
-with open(path, "w") as file:
-    file.write("a\n")
-    file.write("ab\n")
-    file.write("abc\n")
+# with open(path, "w") as file:
+#     file.write("a\n")
+#     file.write("ab\n")
+#     file.write("abc\n")
+
+path = Path("./aaa/aaa.txt")
+try: #방법 2
+# 1. if path.exists(): #파일이 없어도 에러메시지가 안 나와 > 방어적 코드
+    with open(path) as file:
+        for line in file:
+            print(line)
+
+except Exception as e:
+    pass
