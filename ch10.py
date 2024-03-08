@@ -42,6 +42,9 @@ print(dir_path)
 file_path = Path("./aaa/a.txt")
 print(file_path)
 
+#★★★★★★★★
+print(os.path.split(Path("./aaa/b.txt")))
+# ('aaa', 'b.txt') ★★★★★★★★
 
 print(os.path.isdir(dir_path))
 print(os.path.isdir(file_path))
@@ -49,3 +52,11 @@ print(os.path.isdir(file_path))
 #현재 작업 디렉토리에 있는 모든 항목에 대해 반복
 for d in os.listdir():
     print(d, os.path.isdir(d))
+
+#파일 생성하기
+path = Path("./aaa/aa.txt")
+
+with open(path, "w") as file:
+    file.write("a\n")
+    file.write("ab\n")
+    file.write("abc\n")
