@@ -17,7 +17,7 @@ for i in range(inp):
     print(a+b)
 
 #집합과 맵 > 문 10815
-#데이터 50만 개, 두 수가 겹칠 일이 없다
+#데이터 50만 개, 두 수가 겹칠 일이 없다 > set 활용
 N = int(input())
 card = set(map(int, input().split()))
 M = int(input())
