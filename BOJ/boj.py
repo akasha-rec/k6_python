@@ -79,6 +79,20 @@ string = input() # 56초
 print(len(string.split()))
 
 # 문자열 - 2675 문자열 반복
-A = int(input().split())
+T = int(input()) #테스트 케이스 입력
+
+for _ in range(T): #테스트 케이스만큼 반복
+    
+    n, s = input().split() #공백으로 두 개의 인자를 구분받아 대입
+    result = "" #출력을 위한 빈 문자열
+
+    for i in s: #시퀀스 타입이라서 각각 접근 가능
+        result +=  (i * int(n))
+    print(result)
 
 #문자열 - 2908 상수
+a, b = input().split()
+
+a = a[::-1] #[시작:끝:증가]
+b = b[::-1]
+print(max(a, b))
