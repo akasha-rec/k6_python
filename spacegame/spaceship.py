@@ -6,8 +6,8 @@ pygame.init()
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((setting.WIDTH, setting.HEIGHT))
 image = pygame.image.load(setting.SHIP_IMAGE_PATH) #이미지 있는 폴더명/이미지 이름
-#rect 크기 정보와 좌표 정보를 가지고 있음 > image에 부여?
 
+# rect 크기 정보와 좌표 정보를 가지고 있음 > image에 부여?
 # rect = image.get_rect()
 
 #rect 위치 옮기기
@@ -36,7 +36,7 @@ while True: #무한루프
             sys.exit() # raise SystemExit 보다는
             
             #방향키 입력 시 움직이게 하기
-        elif event.type == pygame.KEYDOWN:
+        elif event.type == pygame.KEYDOWN: #키를 눌렀을 때
             if event.key == pygame.K_RIGHT:
                 ship_rect.right += setting.SHIP_SPEED
             elif event.key == pygame.K_LEFT:
@@ -64,6 +64,7 @@ while True: #무한루프
     #rect 사각형으로 인식하고 그 안에 그려넣겠다?
     # screen.blit(image, rect)
     screen.blit(image, ship_rect) #이미지 표면 픽셀을 스크린 표면에 복사하는 함수 blit
+    
     for bullet in bullets:
         pygame.draw.rect(screen, setting.BULLET_COLOR, bullet)
 
