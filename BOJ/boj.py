@@ -52,12 +52,6 @@ for a in range(1, n+1):
     sum+=a
 print(sum)
 
-# 별 찍기
-n = int(input())
-
-for i in range(1, n+1):
-    print(" "*(n-i)+"*"*i)
-
 # 문 10871 X보다 작은 수
 # 정수 N개, 수열 A와 정수 X가 주어진다. 이 때 A에서 X보다 작은 수를 모두 출력
 N, X = map(int, input().split()) #map 객체는 변수를 여러개 저장 가능
