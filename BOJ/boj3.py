@@ -33,9 +33,9 @@ while (a > 0 and b > 0): #파이썬에서는 &&, || > and, or 사용
     if (a == 0 and b == 0):
         break
 
-A, B = map(int,input().split())
-while A>0 and B>0:
-    print(A+B)
-    A,B = map(int, input().split())
-    if A==0 and B==0:
+a, b = map(int, input().split())
+while (a > 0 and b > 0): #파이썬에서는 &&, || > and, or 사용
+    print(a+b)
+    a, b = map(int, input().split())
+    if (a == 0 and b == 0):
         break
